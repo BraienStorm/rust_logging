@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'logtest'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=logtest",
+                    "--package=logtest"
+                ],
+                "filter": {
+                    "name": "logtest",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "info",
+                "RUST_BACKTRACE": "1"
+            }   
+        }
+    ]
+}
